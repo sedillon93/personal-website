@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "8.3.0",
+  },
   "name": "personal-website",
   "version": "1.0.0",
   "description": "personal website",
