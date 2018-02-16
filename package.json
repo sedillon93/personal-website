@@ -35,7 +35,7 @@
     "build": "webpack",
     "watch": "webpack-dev-server --inline --hot",
     "lint": "eslint ./",
-    "start": "node ./frontend/src/main.js"
+    "start": "node index.js"
   },
   "author": "shannon",
   "license": "MIT"
