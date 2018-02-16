@@ -1,10 +1,11 @@
 import React from 'react';
-import Navbar from '../navbar';
 
 class Landing extends React.Component{
   render(){
     return (
-      <Navbar />
+      <div>
+        <div>I am a landing page doodle</div>
+      </div>
     );
   }
 }

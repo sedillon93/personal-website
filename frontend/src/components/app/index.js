@@ -4,6 +4,7 @@ import About from '../about';
 import Contact from '../contact';
 import Landing from '../landing';
 import Projects from '../projects';
+import Navbar from '../navbar';
 
 class App extends React.Component{
   render(){
@@ -11,6 +12,7 @@ class App extends React.Component{
       <div>
         <BrowserRouter>
           <div>
+            <Navbar />
             <Route exact path="/" component={Landing}/>
           </div>
         </BrowserRouter>
