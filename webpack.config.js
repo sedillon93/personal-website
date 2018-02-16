@@ -29,7 +29,6 @@ webpackConfig.module = {
     },
   ],
 };
-webpackConfig.devtool = 'eval-source-map';
 webpackConfig.devServer = {
   historyApiFallback: true,
 };

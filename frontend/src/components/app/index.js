@@ -8,14 +8,18 @@ import Projects from '../projects';
 class App extends React.Component{
   render(){
     return(
-      <BrowserRouter>
-        <Route exact path="/" component={Landing}/>
-        <Route exact path="/about" component={About}/>
-        <Route exact path="/projects" component={Projects}/>
-        <Route exact path="/contact" component={Contact}/>
-      </BrowserRouter>
+      <div>
+        <BrowserRouter>
+          <div>
+            <Route exact path="/" component={Landing}/>
+          </div>
+        </BrowserRouter>
+      </div>
     );
   }
 }
 
+// <Route exact path="/about" component={About}/>
+// <Route exact path="/projects" component={Projects}/>
+// <Route exact path="/contact" component={Contact}/>
 export default App;

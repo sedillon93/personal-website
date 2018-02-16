@@ -2,7 +2,9 @@ import React from 'react';
 
 class Navbar extends React.Component{
   render(){
-    return 'blah';
+    return (
+      <div>I am a navbar doodle</div>
+    );
   }
 }
 
