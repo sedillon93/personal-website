@@ -4,18 +4,24 @@ import About from '../about';
 import Contact from '../contact';
 import Landing from '../landing';
 import Projects from '../projects';
+import Navbar from '../navbar';
 
 class App extends React.Component{
   render(){
     return(
-      <BrowserRouter>
-        <Route exact path="/" component={Landing}/>
-        <Route exact path="/about" component={About}/>
-        <Route exact path="/projects" component={Projects}/>
-        <Route exact path="/contact" component={Contact}/>
-      </BrowserRouter>
+      <div>
+        <BrowserRouter>
+          <div>
+            <Navbar />
+            <Route exact path="/" component={Landing}/>
+          </div>
+        </BrowserRouter>
+      </div>
     );
   }
 }
 
+// <Route exact path="/about" component={About}/>
+// <Route exact path="/projects" component={Projects}/>
+// <Route exact path="/contact" component={Contact}/>
 export default App;
