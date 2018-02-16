@@ -5,7 +5,7 @@
   "engines": {
     "node": "8.9.4"
   },
-  "main": "./webpack.config.js",
+  "main": "webpack.config.js",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
