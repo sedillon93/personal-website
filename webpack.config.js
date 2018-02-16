@@ -7,9 +7,9 @@ const extractTextPlugin = require('extract-text-webpack-plugin');
 
 const webpackConfig = module.exports = {};
 
-webpackConfig.entry = `${__dirname}/src/main.js`;
+webpackConfig.entry = `${__dirname}/frontend/src/main.js`;
 webpackConfig.output = {
-  path: `${__dirname}/src/build`,
+  path: `${__dirname}/frontend/src/build`,
   filename: 'bundle.[hash].js',
 };
 webpackConfig.plugins = [
