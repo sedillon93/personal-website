@@ -8,7 +8,7 @@ class About extends React.Component{
       <div>
         <p>Hello There</p>
         <img src="" />
-        <p>`I'm Shannon. Full-stack JavaScript developer by day, avid bookworm by night, and kickboxer by the occassional weekend. Keep exploring if you'd like to learn more about me, my background, and the projects I'm working on.`</p>
+        <p>I'm Shannon. Full-stack JavaScript developer by day, avid bookworm by night, and kickboxer by the occassional weekend. Keep exploring if you'd like to learn more about me, my background, and the projects I'm working on.</p>
         <PersonalBackground />
       </div>
     );

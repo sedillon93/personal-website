@@ -3,7 +3,11 @@ import React from 'react';
 class Contact extends React.Component{
   render(){
     return (
-      <div>I am a Contact doodle</div>
+      <section>
+        <p>Want to get in touch?</p>
+        <div>Email</div>
+        <div>LinkedIn</div>
+      </section>
     );
   }
 }
