@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom';
 import About from '../about';
 import Contact from '../contact';
-import Landing from '../landing';
+import Main from '../main';
 import Projects from '../projects';
 import Navbar from '../navbar';
 
@@ -13,7 +13,10 @@ class App extends React.Component{
         <BrowserRouter>
           <div>
             <Navbar />
-            <Route exact path="/" component={Landing}/>
+            <Route exact path="/" component={Main}/>
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/projects" component={Projects}/>
+            <Route exact path="/contact" component={Contact}/>
           </div>
         </BrowserRouter>
       </div>
@@ -21,7 +24,4 @@ class App extends React.Component{
   }
 }
 
-// <Route exact path="/about" component={About}/>
-// <Route exact path="/projects" component={Projects}/>
-// <Route exact path="/contact" component={Contact}/>
 export default App;
