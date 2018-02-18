@@ -18,24 +18,30 @@ class Projects extends React.Component{
     let target = event.target.id;
     let statePropertyToChange = `${target}Visible`;
     // toggle whether projectX visibility is true or false;
-    this.setState(statePropertyToChange = !statePropertyToChange)
+    this.setState(statePropertyToChange = !statePropertyToChange);
   }
 
   render(){
-    let project1JSX = {
-      <p>Description for project 1</p>
-      <a href="">Github link</a>
-    };
+    let project1JSX = (
+      <div>
+        <p>Description for project 1</p>
+        <a href="">Github link</a>
+      </div>
+    );
 
-    let project2JSX = {
-      <p>Description for project 2</p>
-      <a href="">Github link</a>
-    };
+    let project2JSX = (
+      <div>
+        <p>Description for project 2</p>
+        <a href="">Github link</a>
+      </div>
+    );
 
-    let project3JSX = {
-      <p>Description for project 3</p>
-      <a href="">Github link</a>
-    };
+    let project3JSX = (
+      <div>
+        <p>Description for project 3</p>
+        <a href="">Github link</a>
+      </div>
+    );
 
     return (
       <section>
@@ -43,21 +49,21 @@ class Projects extends React.Component{
           <h4>Project 1 title</h4>
           <img src="" />
           <p id="project1">Learn more</p>
-          {project1Visible ? project1JSX : undefined}
+          {this.project1Visible ? project1JSX : undefined}
         </div>
 
         <div>
           <h4>Project 2 title</h4>
           <img src="" />
           <p id="project2">Learn more</p>
-          {project2Visible ? project2JSX : undefined}
+          {this.project2Visible ? project2JSX : undefined}
         </div>
 
         <div>
           <h4>Project 3 title</h4>
           <img src="" />
           <p id="project3">Learn more</p>
-          {project3Visible ? project3JSX : undefined}
+          {this.project3Visible ? project3JSX : undefined}
         </div>
 
       </section>
