@@ -18,7 +18,7 @@ class Projects extends React.Component{
     let target = event.target.id;
     let statePropertyToChange = `${target}Visible`;
     // toggle whether projectX visibility is true or false;
-    this.setState(statePropertyToChange = !statePropertyToChange);
+    this.setState(statePropertyToChange = !this[statePropertyToChange]);  // double check that you can use bracket notation on 'this'
   }
 
   render(){
