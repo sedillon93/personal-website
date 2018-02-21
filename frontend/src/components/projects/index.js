@@ -16,24 +16,28 @@ class Projects extends React.Component{
   }
 
   handleLearnMoreClick(event){
+    event.preventDefault();
     let target = event.target.id;
     let statePropertyToChange = `${target}Visible`;
     // toggle whether projectX visibility is true or false;
-    this.setState(statePropertyToChange = !this[statePropertyToChange]);  // double check that you can use bracket notation on 'this'
+    this.setState({[statePropertyToChange] : !this.state[statePropertyToChange]});
+    console.log(this.state);
   }
 
   render(){
     let project1JSX = (
       <div>
-        <p>Description for project 1</p>
-        <a href="">Github link</a>
+        <p>Description for Project 1</p>
+        <a href="https://report-my-wreck.herokuapp.com/">Check out the live site</a>
+        <a href="https://github.com/sedillon93/CollisionReport">Check out the GitHub repo</a>
       </div>
     );
 
     let project2JSX = (
       <div>
-        <p>Description for project 2</p>
-        <a href="">Github link</a>
+        <p>Description for Project 2</p>
+        <a href="https://report-my-wreck.herokuapp.com/">Check out the live site</a>
+        <a href="https://github.com/sedillon93/CollisionReport">Check out the GitHub repo</a>
       </div>
     );
 
@@ -49,22 +53,22 @@ class Projects extends React.Component{
       <section>
         <div>
           <h4>Project 1 title</h4>
-          <img src="" />
-          <p id="project1">Learn more</p>
+          <img src="/frontend/src/vendor/collisionReport.png" />
+          <button className="learnMore" id="project1" onClick={this.handleLearnMoreClick}>Learn more</button>
           {this.project1Visible ? project1JSX : undefined}
         </div>
 
         <div>
           <h4>Project 2 title</h4>
-          <img src="" />
-          <p id="project2">Learn more</p>
+          <img src="/frontend/src/vendor/collisionReport.png" />
+          <button className="learnMore" id="project2" onClick={this.handleLearnMoreClick}>Learn more</button>
           {this.project2Visible ? project2JSX : undefined}
         </div>
 
         <div>
-          <h4>Project 3 title</h4>
+          <h4>CollisionReport</h4>
           <img src="/frontend/src/vendor/collisionReport.png" />
-          <p id="project3">Learn more</p>
+          <button className="learnMore" id="project3" onClick={this.handleLearnMoreClick}>Learn more</button>
           {this.project3Visible ? project3JSX : undefined}
         </div>
 
