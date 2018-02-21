@@ -1,4 +1,5 @@
 import React from 'react';
+import './_projects.scss';
 /*
 1. on click the 'here' spans should slide out the project description & change clickable text to 'hide'
 2. replace image tags with project screenshot
@@ -38,8 +39,9 @@ class Projects extends React.Component{
 
     let project3JSX = (
       <div>
-        <p>Description for project 3</p>
-        <a href="">Github link</a>
+        <p>Description for CollisionReport</p>
+        <a href="https://report-my-wreck.herokuapp.com/">Check out the live site</a>
+        <a href="https://github.com/sedillon93/CollisionReport">Check out the GitHub repo</a>
       </div>
     );
 
@@ -61,7 +63,7 @@ class Projects extends React.Component{
 
         <div>
           <h4>Project 3 title</h4>
-          <img src="" />
+          <img src="/frontend/src/vendor/collisionReport.png" />
           <p id="project3">Learn more</p>
           {this.project3Visible ? project3JSX : undefined}
         </div>
