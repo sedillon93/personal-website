@@ -1,0 +1,30 @@
+#contactInfoSection {
+  h2 {
+    font-size: 4em;
+    text-align: center;
+  }
+
+  div {
+    text-align: center;
+  }
+
+  span {
+    display: none;
+  }
+
+  button {
+    font-size: 2em;
+  }
+}
+
+#emailLink:hover {
+  span {
+    display: inline;
+  }
+}
+
+#linkedinLink:hover {
+  span {
+    display: inline;
+  }
+}
