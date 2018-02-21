@@ -21,7 +21,6 @@ class Projects extends React.Component{
     let statePropertyToChange = `${target}Visible`;
     // toggle whether projectX visibility is true or false;
     this.setState({[statePropertyToChange] : !this.state[statePropertyToChange]});
-    console.log(this.state);
   }
 
   render(){
@@ -55,21 +54,21 @@ class Projects extends React.Component{
           <h4>Project 1 title</h4>
           <img src="/frontend/src/vendor/collisionReport.png" />
           <button className="learnMore" id="project1" onClick={this.handleLearnMoreClick}>Learn more</button>
-          {this.project1Visible ? project1JSX : undefined}
+          {this.state.project1Visible ? project1JSX : undefined}
         </div>
 
         <div>
           <h4>Project 2 title</h4>
           <img src="/frontend/src/vendor/collisionReport.png" />
           <button className="learnMore" id="project2" onClick={this.handleLearnMoreClick}>Learn more</button>
-          {this.project2Visible ? project2JSX : undefined}
+          {this.state.project2Visible ? project2JSX : undefined}
         </div>
 
         <div>
           <h4>CollisionReport</h4>
           <img src="/frontend/src/vendor/collisionReport.png" />
           <button className="learnMore" id="project3" onClick={this.handleLearnMoreClick}>Learn more</button>
-          {this.project3Visible ? project3JSX : undefined}
+          {this.state.project3Visible ? project3JSX : undefined}
         </div>
 
       </section>
