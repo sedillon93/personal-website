@@ -1,4 +1,5 @@
 import React from 'react';
+import './_projects.scss';
 /*
 1. on click the 'here' spans should slide out the project description & change clickable text to 'hide'
 2. replace image tags with project screenshot
@@ -15,55 +16,58 @@ class Projects extends React.Component{
   }
 
   handleLearnMoreClick(event){
+    event.preventDefault();
     let target = event.target.id;
     let statePropertyToChange = `${target}Visible`;
     // toggle whether projectX visibility is true or false;
-    this.setState(statePropertyToChange = !statePropertyToChange);
+    this.setState({[statePropertyToChange] : !this.state[statePropertyToChange]});
   }
 
   render(){
     let project1JSX = (
       <div>
-        <p>Description for project 1</p>
-        <a href="">Github link</a>
+        <p>Description for IntelliSound AI</p>
+        <a href="https://intellisound.herokuapp.com/">Check out the live site</a>
+        <a href="https://github.com/IntelliSound">Check out the GitHub repo</a>
       </div>
     );
 
     let project2JSX = (
       <div>
-        <p>Description for project 2</p>
-        <a href="">Github link</a>
+        <p>Description for ScrambleVox</p>
+        <a href="https://github.com/ScrambleVox/server">Check out the GitHub repo</a>
       </div>
     );
 
     let project3JSX = (
       <div>
-        <p>Description for project 3</p>
-        <a href="">Github link</a>
+        <p>Description for CollisionReport</p>
+        <a href="https://report-my-wreck.herokuapp.com/">Check out the live site</a>
+        <a href="https://github.com/sedillon93/CollisionReport">Check out the GitHub repo</a>
       </div>
     );
 
     return (
-      <section>
+      <section id="projectSection">
         <div>
-          <h4>Project 1 title</h4>
-          <img src="" />
-          <p id="project1">Learn more</p>
-          {this.project1Visible ? project1JSX : undefined}
+          <h4>IntelliSound AI</h4>
+          <img src="/frontend/src/vendor/intellisoundai.jpg" />
+          <button className="learnMore" id="project1" onClick={this.handleLearnMoreClick}>Learn more</button>
+          {this.state.project1Visible ? project1JSX : undefined}
         </div>
 
         <div>
-          <h4>Project 2 title</h4>
-          <img src="" />
-          <p id="project2">Learn more</p>
-          {this.project2Visible ? project2JSX : undefined}
+          <h4>ScrambleVox (CLI and API)</h4>
+          <img src="/frontend/src/vendor/scramblevox.jpg" />
+          <button className="learnMore" id="project2" onClick={this.handleLearnMoreClick}>Learn more</button>
+          {this.state.project2Visible ? project2JSX : undefined}
         </div>
 
         <div>
-          <h4>Project 3 title</h4>
-          <img src="" />
-          <p id="project3">Learn more</p>
-          {this.project3Visible ? project3JSX : undefined}
+          <h4>CollisionReport</h4>
+          <img src="/frontend/src/vendor/collisionReport.png" />
+          <button className="learnMore" id="project3" onClick={this.handleLearnMoreClick}>Learn more</button>
+          {this.state.project3Visible ? project3JSX : undefined}
         </div>
 
       </section>
