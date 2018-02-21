@@ -1,12 +1,14 @@
-img {
-  width: 100%;
-  min-width: 450px;
-  max-width: 700px;
-  height: 75%;
-  min-height: .75 * 450px;
-  max-height: .75 * 400px;
+#projectSection {
+  img {
+    width: 100%;
+    min-width: 450px;
+    max-width: 700px;
+    height: 75%;
+    min-height: .75 * 450px;
+    max-height: .75 * 400px;
+  }
 }
 
 .learnMore:hover {
-  cursor: crosshair;
+  cursor: pointer;
 }

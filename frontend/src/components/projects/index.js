@@ -26,17 +26,16 @@ class Projects extends React.Component{
   render(){
     let project1JSX = (
       <div>
-        <p>Description for Project 1</p>
-        <a href="https://report-my-wreck.herokuapp.com/">Check out the live site</a>
-        <a href="https://github.com/sedillon93/CollisionReport">Check out the GitHub repo</a>
+        <p>Description for IntelliSound AI</p>
+        <a href="https://intellisound.herokuapp.com/">Check out the live site</a>
+        <a href="https://github.com/IntelliSound">Check out the GitHub repo</a>
       </div>
     );
 
     let project2JSX = (
       <div>
-        <p>Description for Project 2</p>
-        <a href="https://report-my-wreck.herokuapp.com/">Check out the live site</a>
-        <a href="https://github.com/sedillon93/CollisionReport">Check out the GitHub repo</a>
+        <p>Description for ScrambleVox</p>
+        <a href="https://github.com/ScrambleVox/server">Check out the GitHub repo</a>
       </div>
     );
 
@@ -49,17 +48,17 @@ class Projects extends React.Component{
     );
 
     return (
-      <section>
+      <section id="projectSection">
         <div>
-          <h4>Project 1 title</h4>
-          <img src="/frontend/src/vendor/collisionReport.png" />
+          <h4>IntelliSound AI</h4>
+          <img src="/frontend/src/vendor/intellisoundai.jpg" />
           <button className="learnMore" id="project1" onClick={this.handleLearnMoreClick}>Learn more</button>
           {this.state.project1Visible ? project1JSX : undefined}
         </div>
 
         <div>
-          <h4>Project 2 title</h4>
-          <img src="/frontend/src/vendor/collisionReport.png" />
+          <h4>ScrambleVox (CLI and API)</h4>
+          <img src="/frontend/src/vendor/scramblevox.jpg" />
           <button className="learnMore" id="project2" onClick={this.handleLearnMoreClick}>Learn more</button>
           {this.state.project2Visible ? project2JSX : undefined}
         </div>
