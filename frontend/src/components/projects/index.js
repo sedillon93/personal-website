@@ -1,5 +1,4 @@
 import React from 'react';
-import './_projects.scss';
 /*
 1. on click the 'here' spans should slide out the project description & change clickable text to 'hide'
 2. replace image tags with project screenshot

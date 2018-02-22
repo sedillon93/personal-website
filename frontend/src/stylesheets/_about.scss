@@ -7,6 +7,10 @@ section {
 
   p {
     text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    color: $secondary-font-color;
   }
 
   img {
@@ -16,11 +20,13 @@ section {
 }
 #aboutMeBlurb {
   position: absolute;
-  top: 50%;
+  // top: 50%;
   font-size: 2em;
-  color: white;
 }
 
 #greeting {
   font-size: 4em;
+  // position: absolute;
+  // left: 50%;
+  // transform: translate(-50%);
 }
