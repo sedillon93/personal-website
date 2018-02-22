@@ -46,26 +46,31 @@ class Projects extends React.Component{
       </div>
     );
 
+    let button1Text, button2Text, button3Text;
+    button1Text = this.state.project1Visible ? 'Show Less' : 'Learn More';
+    button2Text = this.state.project2Visible ? 'Show Less' : 'Learn More';
+    button3Text = this.state.project3Visible ? 'Show Less' : 'Learn More';
+
     return (
       <section id="projectSection">
         <div>
           <h4>IntelliSound AI</h4>
           <img src="/frontend/src/vendor/intellisoundai.jpg" />
-          <button className="learnMore" id="project1" onClick={this.handleLearnMoreClick}>Learn more</button>
+          <button className="learnMore" id="project1" onClick={this.handleLearnMoreClick}>{button1Text}</button>
           {this.state.project1Visible ? project1JSX : undefined}
         </div>
 
         <div>
           <h4>ScrambleVox (CLI and API)</h4>
           <img src="/frontend/src/vendor/scramblevox.jpg" />
-          <button className="learnMore" id="project2" onClick={this.handleLearnMoreClick}>Learn more</button>
+          <button className="learnMore" id="project2" onClick={this.handleLearnMoreClick}>{button2Text}</button>
           {this.state.project2Visible ? project2JSX : undefined}
         </div>
 
         <div>
           <h4>CollisionReport</h4>
           <img src="/frontend/src/vendor/collisionReport.png" />
-          <button className="learnMore" id="project3" onClick={this.handleLearnMoreClick}>Learn more</button>
+          <button className="learnMore" id="project3" onClick={this.handleLearnMoreClick}>{button3Text}</button>
           {this.state.project3Visible ? project3JSX : undefined}
         </div>
 
