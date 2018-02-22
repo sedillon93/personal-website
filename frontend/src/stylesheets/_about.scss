@@ -2,7 +2,7 @@ $bannerImageWidth : 100%;
 $bannerImageHeight : 300px;
 
 section {
-  background-color: white;
+  background-color: $primary-background-color;
 }
 
 #aboutSection {

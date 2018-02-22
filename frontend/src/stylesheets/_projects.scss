@@ -11,6 +11,8 @@ $projectImageMinHeight : .75 * $projectImageMinWidth;
   div {
     display: inline-block;
     width: 90%;
+    margin: 1.5em;
+    position: relative;
   }
 
   img {
@@ -21,6 +23,13 @@ $projectImageMinHeight : .75 * $projectImageMinWidth;
     min-height: $projectImageMinHeight;
     max-height: $projectImageMaxHeight;
   }
+}
+
+.learnMore {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -20px;
 }
 
 .learnMore:hover {
