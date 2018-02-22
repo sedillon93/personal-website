@@ -1,26 +1,32 @@
+$navbarFontColor : white;
+
+nav {
+  background-color: black;
+}
+
 ul {
   width: 100%;
-  height: 3em;
+  height: 2.5em;
 
   li {
     display: inline;
-    margin-right: 1em;
+    margin-right: 2em;
+    float: right;
+    padding: 10px 0;
+    font-size: 1.25em;
 
     a{
       text-decoration: none;
-      color: blue;
+      color: $navbarFontColor;
     }
+
     a:visited{
-      color: blue;
+      color: $navbarFontColor;
     }
-    a:hover{
-      color: black;
-    }
-
   }
-
 }
 
-// #homeLinkIcon{
-//   float: left;
-// }
+#homeLinkIcon{
+  float: left;
+  margin-left: 2em;
+}
