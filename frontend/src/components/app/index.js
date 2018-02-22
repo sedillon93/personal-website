@@ -5,6 +5,10 @@ import Contact from '../contact';
 import Main from '../main';
 import Projects from '../projects';
 import Navbar from '../navbar';
+// import fontawesome from '@fortawesome/fontawesome';
+// import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+// import {faLinkedin, faEnvelope} from '@fortawesome/fontawesome-free-solid';
+// fontawesome.library.add(faLinkedin, faEnvelope);
 
 class App extends React.Component{
   render(){
