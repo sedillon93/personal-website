@@ -23,6 +23,14 @@ $projectImageMinHeight : .75 * $projectImageMinWidth;
     min-height: $projectImageMinHeight;
     max-height: $projectImageMaxHeight;
   }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: lightgray;
+  }
 }
 
 .learnMore {

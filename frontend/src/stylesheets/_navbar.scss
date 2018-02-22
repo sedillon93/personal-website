@@ -1,4 +1,4 @@
-$navbarFontColor : white;
+// $navbarFontColor : white;
 
 nav {
   background-color: black;
@@ -16,12 +16,12 @@ ul {
     font-size: 1.25em;
 
     span{
-      color: $navbarFontColor;
+      color: $primary-font-color;
     }
 
     span:hover{
       cursor: pointer;
-      color: $navbarFontColor;
+      color: $primary-font-color;
     }
   }
 }

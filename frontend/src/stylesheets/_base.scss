@@ -1,2 +1,15 @@
-$primary-background-color: ghostwhite;
-$secondary-font-color: white;
+$primary-background-color: #202938;
+$primary-font-color: white;
+
+section {
+  background-color: $primary-background-color;
+}
+
+.sectionTitle {
+  font-size: 2em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
