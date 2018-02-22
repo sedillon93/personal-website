@@ -25,47 +25,53 @@ class Projects extends React.Component{
   render(){
     let project1JSX = (
       <div>
-        <p>Description for IntelliSound AI</p>
-        <a href="https://intellisound.herokuapp.com/">Check out the live site</a>
-        <a href="https://github.com/IntelliSound">Check out the GitHub repo</a>
+        <p>IntelliSoundAI lets you learn more about neural networks by playing. The neural network is built on the synaptic.js library and trains on a simple wav file. It learns the wave shape pattern then produces a new audio file imitating the pattern it identified.</p>
+        <p><a href="https://intellisound.herokuapp.com/">Check out the live site</a></p>
+        <p><a href="https://github.com/IntelliSound">Check out the GitHub repo</a></p>
       </div>
     );
 
     let project2JSX = (
       <div>
-        <p>Description for ScrambleVox</p>
+        <p>ScrambleVox is a CLI and API for anyone who loves tinkering with audio. Users to modify simple wav audio files using one of five provided transformations. After creating an account transformed audio files can be saved to AWS S3.</p>
         <a href="https://github.com/ScrambleVox/server">Check out the GitHub repo</a>
       </div>
     );
 
     let project3JSX = (
       <div>
-        <p>Description for CollisionReport</p>
-        <a href="https://report-my-wreck.herokuapp.com/">Check out the live site</a>
-        <a href="https://github.com/sedillon93/CollisionReport">Check out the GitHub repo</a>
+        <p>Report My Wreck makes it easier for anyone who has been in a car accident to document and file a claim. Select where the accident happened using the Google Maps interface, drop car pins to replicate what happened, add some notes, and email the entire bundle to your insurance representative.</p>
+        <p><a href="https://report-my-wreck.herokuapp.com/">Check out the live site</a></p>
+        <p><a href="https://github.com/sedillon93/CollisionReport">Check out the GitHub repo</a></p>
       </div>
     );
 
+    let button1Text, button2Text, button3Text;
+    button1Text = this.state.project1Visible ? 'Show Less' : 'Learn More';
+    button2Text = this.state.project2Visible ? 'Show Less' : 'Learn More';
+    button3Text = this.state.project3Visible ? 'Show Less' : 'Learn More';
+
     return (
       <section id="projectSection">
+        <h2 className="sectionTitle">Projects</h2>
         <div>
           <h4>IntelliSound AI</h4>
           <img src="/frontend/src/vendor/intellisoundai.jpg" />
-          <button className="learnMore" id="project1" onClick={this.handleLearnMoreClick}>Learn more</button>
+          <button className="learnMore" id="project1" onClick={this.handleLearnMoreClick}>{button1Text}</button>
           {this.state.project1Visible ? project1JSX : undefined}
         </div>
 
         <div>
-          <h4>ScrambleVox (CLI and API)</h4>
+          <h4>ScrambleVox</h4>
           <img src="/frontend/src/vendor/scramblevox.jpg" />
-          <button className="learnMore" id="project2" onClick={this.handleLearnMoreClick}>Learn more</button>
+          <button className="learnMore" id="project2" onClick={this.handleLearnMoreClick}>{button2Text}</button>
           {this.state.project2Visible ? project2JSX : undefined}
         </div>
 
         <div>
-          <h4>CollisionReport</h4>
+          <h4>Report My Wreck</h4>
           <img src="/frontend/src/vendor/collisionReport.png" />
-          <button className="learnMore" id="project3" onClick={this.handleLearnMoreClick}>Learn more</button>
+          <button className="learnMore" id="project3" onClick={this.handleLearnMoreClick}>{button3Text}</button>
           {this.state.project3Visible ? project3JSX : undefined}
         </div>
 
