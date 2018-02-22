@@ -11,7 +11,6 @@ class Navbar extends React.Component{
     event.preventDefault();
     let target = event.target.id;
     let sectionToScrollTo = document.getElementById(`${target}Section`);
-    // console.log(sectionToScrollTo);
     sectionToScrollTo.scrollIntoView(true);
 
   }
@@ -20,10 +19,9 @@ class Navbar extends React.Component{
     return (
       <nav>
         <ul>
-          <li id='homeLinkIcon'><button onClick={this.scrollToSection} id="home">Home</button></li>
-          <li><button id="contactInfo" onClick={this.scrollToSection}>Contact</button></li>
-          <li><button id="project" onClick={this.scrollToSection}>Projects</button></li>
-          <li><button id="about" onClick={this.scrollToSection}>About</button></li>
+          <li><span id="contactInfo" onClick={this.scrollToSection}>Contact</span></li>
+          <li><span id="project" onClick={this.scrollToSection}>Projects</span></li>
+          <li><span id="about" onClick={this.scrollToSection}>About</span></li>
         </ul>
       </nav>
     );
@@ -31,8 +29,3 @@ class Navbar extends React.Component{
 }
 
 export default Navbar;
-
-// <li id='homeLinkIcon'><Link to='/'>Home</Link></li>
-// <li><Link to='/contact'>Contact</Link></li>
-// <li><Link to='/projects'>Projects</Link></li>
-// <li><Link to='/about'>About</Link></li>
