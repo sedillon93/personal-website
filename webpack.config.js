@@ -2,18 +2,19 @@
 
 require('dotenv').config();
 
-const htmlPlugin = require('html-webpack-plugin');
+const path = require('path');
+const htmlWebpackPlugin = require('html-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 
 const webpackConfig = module.exports = {};
 
 webpackConfig.entry = `${__dirname}/frontend/src/main.js`;
 webpackConfig.output = {
-  path: `${__dirname}/frontend/src/build`,
+  path: path.resolve(__dirname, './dist'),
   filename: 'bundle.[hash].js',
 };
 webpackConfig.plugins = [
-  new htmlPlugin(),
+  new htmlWebpackPlugin(),
   new extractTextPlugin('bundle.[hash].css'),
 ];
 webpackConfig.module = {
