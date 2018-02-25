@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static(`${__dirname}/dist`));
 
 app.get('*', (request, response) => {
-  response.sendFile(`dist/index.html`, {root: 'personal-website'});
+  response.sendFile(`index.html`, {root: './dist'});
 })
 
 app.listen(process.env.PORT);
