@@ -1,12 +1,12 @@
 'use strict';
 
 const express = require('express');
-const testing = express();
+const app = express();
 
-testing.use(express.static(`${__dirname}/dist`));
+app.use(express.static(`${__dirname}/dist`));
 
-testing.get('*', (request, response) => {
+app.get('*', (request, response) => {
   response.sendFile(`index.html`, {root: './dist'});
 })
 
-testing.listen(process.env.PORT);
+app.listen(process.env.PORT);

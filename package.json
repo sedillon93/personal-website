@@ -36,7 +36,7 @@
   },
   "scripts": {
     "test": "jest -i --coverage",
-    "build": "webpack",
+    "postinstall": "webpack",
     "watch": "webpack-dev-server --inline --hot",
     "lint": "eslint ./",
     "start": "node index.js"
