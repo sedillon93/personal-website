@@ -17,7 +17,7 @@ class App extends React.Component{
         <BrowserRouter>
           <div>
             <Navbar />
-            <Route exact path="/" component={Main}/>
+            <Route exact path="/" component={Main} />
             <Route exact path="/about" component={About}/>
             <Route exact path="/projects" component={Projects}/>
             <Route exact path="/contact" component={Contact}/>

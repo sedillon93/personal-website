@@ -3,10 +3,10 @@
 const express = require('express');
 const app = express();
 
-app.use(express.static(`${__dirname}/frontend/src/build`));
+app.use(express.static(`${__dirname}/dist`));
 
 app.get('*', (request, response) => {
-  response.sendFile(`${__dirname}/frontend/src/build/index.html`);
+  response.sendFile(`index.html`, {root: './dist'});
 })
 
 app.listen(process.env.PORT);
