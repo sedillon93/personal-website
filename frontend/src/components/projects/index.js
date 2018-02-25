@@ -56,21 +56,21 @@ class Projects extends React.Component{
         <h2 className="sectionTitle">Projects</h2>
         <div>
           <h4>IntelliSound AI</h4>
-          <img src="/frontend/src/vendor/intellisoundai.jpg" />
+          <img src="https://s3-us-west-2.amazonaws.com/personal-website-images/intellisoundai.jpg" />
           <button className="learnMore" id="project1" onClick={this.handleLearnMoreClick}>{button1Text}</button>
           {this.state.project1Visible ? project1JSX : undefined}
         </div>
 
         <div>
           <h4>ScrambleVox</h4>
-          <img src="/frontend/src/vendor/scramblevox.jpg" />
+          <img src="https://s3-us-west-2.amazonaws.com/personal-website-images/scramblevox.jpg" />
           <button className="learnMore" id="project2" onClick={this.handleLearnMoreClick}>{button2Text}</button>
           {this.state.project2Visible ? project2JSX : undefined}
         </div>
 
         <div>
           <h4>Report My Wreck</h4>
-          <img src="/frontend/src/vendor/collisionReport.png" />
+          <img src="https://s3-us-west-2.amazonaws.com/personal-website-images/collisionReport.png" />
           <button className="learnMore" id="project3" onClick={this.handleLearnMoreClick}>{button3Text}</button>
           {this.state.project3Visible ? project3JSX : undefined}
         </div>

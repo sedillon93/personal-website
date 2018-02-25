@@ -19,7 +19,7 @@ $bannerImageHeight : 300px;
   #bannerBackgroundImage {
     width: $bannerImageWidth;
     height: $bannerImageHeight;
-    background-image: url('/frontend/src/vendor/starry-sky.jpg');
+    background-image: url('https://s3-us-west-2.amazonaws.com/personal-website-images/starry-sky.jpg');
     background-size: cover;
     background-repeat: no-repeat;
   }
